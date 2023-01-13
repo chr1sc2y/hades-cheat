@@ -1026,7 +1026,7 @@ EncounterData =
 		RequiredMinBiomeDepth = 3,
 
 		ThanatosKills = 0,
-		PlayerKills = 0,
+		PlayerKills = 100,
 
 		BlockFishingBeforeStart = true,
 		BlockCodexBeforeStart = true,

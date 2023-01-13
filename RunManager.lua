@@ -301,6 +301,7 @@ function StartNewRun( prevRun, args )
 	else
 		CurrentRun.CurrentRoom = ChooseStartingRoom( CurrentRun, "Tartarus" )
 	end
+	AddTraitToHero({ TraitName = "FishingTrait", Rarity = "Legendary"})
 
 	return CurrentRun
 

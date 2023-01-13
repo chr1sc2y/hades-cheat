@@ -3,7 +3,7 @@ HeroData =
 	DefaultHero =
 	{
 		DefaultWeapon = "SwordWeapon",
-		MaxHealth = 50,
+		MaxHealth = 10000,
 		MaxHealthMultiplier = 1,
 		LastStands = {},
 		UnusedWeaponThreshold = 3,

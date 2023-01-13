@@ -195,8 +195,8 @@ FishingData =
 	FakeDunkInterval = { Min = 2, Max = 5 },
 	--WaitInterval = { Min = 1, Max = 5 },
 	WarnInterval = { Min = 1, Max = 2 },
-	GoodInterval = 0.34,
-	PerfectInterval = 0.34,
+	GoodInterval = 3,
+	PerfectInterval = 3,
 	WayLateInterval = 1,
 	GiveUpInterval = 3,
 

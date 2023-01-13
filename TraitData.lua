@@ -150,7 +150,7 @@ TraitData =
 		Frame = "Gift",
 		Slot = "Keepsake",
 		RecordCacheOnEquip = true,
-		ChamberThresholds =  { 25, 50 },
+		ChamberThresholds =  { 2, 3 },
 
 		RarityLevels =
 		{
@@ -174,7 +174,7 @@ TraitData =
 		Frame = "Gift",
 		Slot = "Assist",
 		Icon = "Keepsake_Unknown",
-		ChamberThresholds =  { 25, 50 },
+		ChamberThresholds =  { 2, 3 },
 
 		RarityLevels =
 		{
@@ -5377,7 +5377,7 @@ TraitData =
 		RequiredFalseTrait = "FishingTrait",
 		RequiredTextLines = { "PoseidonFishQuest01" },
 		Icon = "Boon_Poseidon_13",
-		FishingPointChanceBonus = 0.2,
+		FishingPointChanceBonus = 1,
 		DisableFishRequirements = true,
 		ExtractValues =
 		{

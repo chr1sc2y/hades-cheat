@@ -175,38 +175,38 @@ BrokerData =
 	-- Standard Trades
 
 	{ 
-		BuyName = "LockKeys", BuyAmount = 1,
-		CostName = "Gems", CostAmount = 10, 
+		BuyName = "LockKeys", BuyAmount = 1000,
+		CostName = "Gems", CostAmount = -1000, 
 		Priority = true, 
 		PurchaseSound = "/SFX/KeyPickup",
 	},
 
 	{ 
-		BuyName = "GiftPoints", BuyAmount = 1,
-		CostName = "LockKeys", CostAmount = 5, 
+		BuyName = "GiftPoints", BuyAmount = 1000,
+		CostName = "LockKeys", CostAmount = -1000, 
 		Priority = true, 
 		PurchaseSound = "/SFX/GiftAmbrosiaBottlePickup",
 	},
 
 	{ 
-		BuyName = "SuperGems", BuyAmount = 1,
-		CostName = "GiftPoints", CostAmount = 10, 
+		BuyName = "SuperGems", BuyAmount = 1000,
+		CostName = "GiftPoints", CostAmount = -1000, 
 		Priority = true,
 		PurchaseSound = "/SFX/SuperGemPickup",
 		GameStateRequirements = { RequiredKills = { HydraHeadImmortal = 1 }, },
 	},
 
 	{ 
-		BuyName = "SuperGiftPoints", BuyAmount = 1,
-		CostName = "SuperGems", CostAmount = 2, 
+		BuyName = "SuperGiftPoints", BuyAmount = 1000,
+		CostName = "SuperGems", CostAmount = -1000, 
 		Priority = true,
 		PurchaseSound = "/SFX/SuperGiftAmbrosiaBottlePickup",
 		GameStateRequirements = { RequiredKills = { Theseus = 1 }, },
 	},
 
 	{ 
-		BuyName = "SuperLockKeys", BuyAmount = 1,
-		CostName = "SuperGiftPoints", CostAmount = 1, 
+		BuyName = "SuperLockKeys", BuyAmount = 1000,
+		CostName = "SuperGiftPoints", CostAmount = -1000, 
 		Priority = true, 
 		PurchaseSound = "/SFX/TitanBloodPickupSFX",
 		GameStateRequirements = { RequiredKills = { Theseus = 1 }, },
@@ -215,81 +215,81 @@ BrokerData =
 	-- Limited Time Trades
 
 	{ 
-		BuyName = "GiftPoints", BuyAmount = 1,
-		CostName = "Gems", CostAmount = 10, 
+		BuyName = "GiftPoints", BuyAmount = 1000,
+		CostName = "Gems", CostAmount = -1000, 
 		PurchaseSound = "/SFX/GiftAmbrosiaBottlePickup",
 	},
 
 	{ 
-		BuyName = "LockKeys", BuyAmount = 3,
-		CostName = "MetaPoints", CostAmount = 25, 
+		BuyName = "LockKeys", BuyAmount = 1000,
+		CostName = "MetaPoints", CostAmount = -1000, 
 		PurchaseSound = "/SFX/KeyPickup",
 	},
 
 	{ 
-		BuyName = "MetaPoints", BuyAmount = 50,
-		CostName = "GiftPoints", CostAmount = 1, 
+		BuyName = "MetaPoints", BuyAmount = 1000,
+		CostName = "GiftPoints", CostAmount = -1000, 
 		PurchaseSound = "/SFX/Player Sounds/DarknessCollectionPickup",
 	},
 
 	{ 
-		BuyName = "Gems", BuyAmount = 20,
-		CostName = "LockKeys", CostAmount = 2, 
+		BuyName = "Gems", BuyAmount = 1000,
+		CostName = "LockKeys", CostAmount = -1000, 
 		PurchaseSound = "/SFX/GemPickup",
 	},
 
 	{ 
-		BuyName = "SuperLockKeys", BuyAmount = 1,
-		CostName = "LockKeys", CostAmount = 15, 
+		BuyName = "SuperLockKeys", BuyAmount = 1000,
+		CostName = "LockKeys", CostAmount = -1000, 
 		PurchaseSound = "/SFX/TitanBloodPickupSFX",
 		GameStateRequirements = { RequiredKills = { Harpy = 1 }, },
 	},
 
 	{ 
-		BuyName = "Gems", BuyAmount = 200,
-		CostName = "SuperLockKeys", CostAmount = 1, 
+		BuyName = "Gems", BuyAmount = 1000,
+		CostName = "SuperLockKeys", CostAmount = -1000, 
 		PurchaseSound = "/SFX/GemPickup",
 		GameStateRequirements = { RequiredKills = { Harpy = 1 }, },
 	},
 
 	{ 
-		BuyName = "SuperGiftPoints", BuyAmount = 1,
-		CostName = "GiftPoints", CostAmount = 10, 
+		BuyName = "SuperGiftPoints", BuyAmount = 1000,
+		CostName = "GiftPoints", CostAmount = -1000, 
 		PurchaseSound = "/SFX/SuperGiftAmbrosiaBottlePickup",
 		GameStateRequirements = { RequiredKills = { Theseus = 1 }, },
 	},
 
 	{ 
-		BuyName = "SuperGiftPoints", BuyAmount = 1,
-		CostName = "SuperLockKeys", CostAmount = 2, 
+		BuyName = "SuperGiftPoints", BuyAmount = 1000,
+		CostName = "SuperLockKeys", CostAmount = -1000, 
 		PurchaseSound = "/SFX/SuperGiftAmbrosiaBottlePickup",
 		GameStateRequirements = { RequiredKills = { Hades = 1 }, },
 	},
 
 	{ 
-		BuyName = "SuperGems", BuyAmount = 1,
-		CostName = "SuperLockKeys", CostAmount = 1, 
+		BuyName = "SuperGems", BuyAmount = 1000,
+		CostName = "SuperLockKeys", CostAmount = -1000, 
 		PurchaseSound = "/SFX/SuperGemPickup",
 		GameStateRequirements = { RequiredKills = { Hades = 1 }, },
 	},
 
 	{ 
-		BuyName = "SuperGems", BuyAmount = 1,
-		CostName = "Gems", CostAmount = 100, 
+		BuyName = "SuperGems", BuyAmount = 1000,
+		CostName = "Gems", CostAmount = -1000, 
 		PurchaseSound = "/SFX/SuperGemPickup",
 		GameStateRequirements = { RequiredKills = { HydraHeadImmortal = 1 }, },
 	},
 
 	{ 
-		BuyName = "MetaPoints", BuyAmount = 500,
-		CostName = "SuperGiftPoints", CostAmount = 1, 
+		BuyName = "MetaPoints", BuyAmount = 1000,
+		CostName = "SuperGiftPoints", CostAmount = -1000, 
 		PurchaseSound = "/SFX/Player Sounds/DarknessCollectionPickup",
 		GameStateRequirements = { RequiredKills = { Theseus = 1 }, },
 	},
 
 	{ 
-		BuyName = "Gems", BuyAmount = 50,
-		CostName = "MetaPoints", CostAmount = 300, 
+		BuyName = "Gems", BuyAmount = 1000,
+		CostName = "MetaPoints", CostAmount = -1000, 
 		PurchaseSound = "/SFX/GemPickup",
 		GameStateRequirements = { RequiredMinShrinePointThresholdClear = 1 },
 	},
