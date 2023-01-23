@@ -62,7 +62,7 @@ function HandleDeath( currentRun, killer, killingUnitWeapon )
 	CurrentRun.Hero.IsDead = true
 	CurrentRun.ActiveBiomeTimer = false
 	if ConfigOptionCache.EasyMode and not currentRun.Cleared then
-		GameState.EasyModeLevel = GameState.EasyModeLevel + 1
+		GameState.EasyModeLevel = GameState.EasyModeLevel + 5
 	end
 	if not CurrentRun.Cleared then -- Already recorded if cleared
 		RecordRunStats()

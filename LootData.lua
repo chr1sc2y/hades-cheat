@@ -18689,7 +18689,7 @@ LootData =
 				PlayOnce = true,
 				PreEventFunctionName = "ChaosInteractPresentation", PreEventFunctionArgs = { PickupWait = 1.0, },
 				RequiredTextLines = { "ChaosFirstPickUp" },
-				RequiredAccumulatedMetaPoints = 10000,
+				RequiredAccumulatedMetaPoints = 10,
 				RequiredFalseFlags = { "NyxChaosReunionInProgress" },
 				{ Cue = "/VO/Chaos_0298",
 					StartSound = "/SFX/Menu Sounds/ChaosMiscSFX", UseEventEndSound = true,
