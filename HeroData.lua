@@ -10,7 +10,7 @@ HeroData =
 		DashManeuverTimeThreshold = 0.4,
 		Super =
 		{
-			DamageDealtMultiplier = 0.01,		-- Percent of damage dealt to convert to wrath
+			DamageDealtMultiplier = 0.015,		-- Percent of damage dealt to convert to wrath
 			DamageTakenMultiplier = 60,		-- every 100% of max health taken charges your super by this much
 			Active = false,
 		},
@@ -46,7 +46,7 @@ HeroData =
 		-- EmoteOffsetY = -100,
 		SpeechCooldownTime = 9,
 
-		EasyModeDamageMultiplierBase = 0.8,
+		EasyModeDamageMultiplierBase = 1.6,
 		EasyModeDamageMultiplierPerDeath = -0.02,
 		EasyModeDamageMultiplierDeathCap = 30,
 

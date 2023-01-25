@@ -1016,6 +1016,9 @@ RoomSetData.Tartarus =
 			RequiredMaxBiomeDepth = 6,
 		},
 
+		ForcedRewardStore = "RunProgress",
+		EligibleRewards = { "Boon", "WeaponUpgrade" },
+
 		EntranceDirection = "Right",
 		NumExits = 1,
 		ZoomFraction = 0.95,

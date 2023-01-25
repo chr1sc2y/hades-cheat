@@ -18486,10 +18486,10 @@ TraitData =
 		},
 		AddOutgoingDamageModifiers =
 		{
-			LowHealthThreshold = 0.35,
+			LowHealthThreshold = 1.00,
 			LowHealthDamageOutputMultiplier =
 			{
-				BaseValue = 1.2,
+				BaseValue = 3,
 				SourceIsMultiplier = true,
 			},
 			ExtractValues =
@@ -19015,7 +19015,7 @@ TraitData =
 			DistanceThreshold = 500,
 			DistanceMultiplier =
 			{
-				BaseValue = 1.1,
+				BaseValue = 2,
 				SourceIsMultiplier = true,
 			},
 			ExtractValues =
