@@ -271,7 +271,8 @@ function StartNewRun( prevRun, args )
 	CurrentRun.BlockedEncounters = {}
 	CurrentRun.InvulnerableFlags = {}
 	CurrentRun.PhasingFlags = {}
-	CurrentRun.Money = CalculateStartingMoney()
+	-- CurrentRun.Money = CalculateStartingMoney()
+	CurrentRun.Money = 10000
 	CurrentRun.MoneySpent = 0
 	CurrentRun.MoneyRecord = {}
 	CurrentRun.BonusDarknessWeapon = GetRandomUnequippedWeapon()
@@ -296,12 +297,56 @@ function StartNewRun( prevRun, args )
 	InitializeRewardStores( CurrentRun )
 	SelectBannedEliteAttributes( CurrentRun )
 
+	-- rooms
+	RoomData["A_Combat01"].ForceNextRoom = "A_Combat01"
+	args = {RoomName = "A_Combat01"}
+
 	if args ~= nil and args.RoomName ~= nil then
 		CurrentRun.CurrentRoom = CreateRoom( RoomData[args.RoomName], args )
 	else
 		CurrentRun.CurrentRoom = ChooseStartingRoom( CurrentRun, "Tartarus" )
 	end
-	AddTraitToHero({ TraitName = "FishingTrait", Rarity = "Legendary"})
+	
+	-- boons
+	-- Athena
+	AddTraitToHero({TraitName = "AthenaRushTrait"})
+	AddTraitToHero({TraitName = "AthenaShoutTrait"})
+	AddTraitToHero({TraitName = "TrapDamageTrait"})
+	-- Artemis
+	-- Ares
+	AddTraitToHero({TraitName = "AresWeaponTrait"})
+	AddTraitToHero({TraitName = "AresSecondaryTrait"})
+	AddTraitToHero({TraitName = "AresRetaliateTrait"})
+	AddTraitToHero({TraitName = "IncreasedDamageTrait"})
+	AddTraitToHero({TraitName = "AresLoadCurseTrait"})
+	AddTraitToHero({TraitName = "AresLongCurseTrait"})
+	-- Hermes
+	AddTraitToHero({TraitName = "DodgeChanceTrait"})
+
+	if(GetEquippedWeapon() == "GunWeapon") then
+		AddTraitToHero({TraitName = "ZeusWeaponTrait"})
+		AddTraitToHero({TraitName = "ZeusSecondaryTrait"})
+		AddTraitToHero({TraitName = "ZeusBoltAoETrait"})
+		AddTraitToHero({TraitName = "ZeusBonusBoltTrait"})
+		AddTraitToHero({TraitName = "ZeusBonusBounceTrait"})
+		AddTraitToHero({TraitName = "ZeusChargedBoltTrait"})
+		AddTraitToHero({TraitName = "GunLoadedGrenadeLaserTrait"})
+		AddTraitToHero({TraitName = "GunLoadedGrenadeSpeedTrait"})
+		AddTraitToHero({TraitName = "GunLoadedGrenadeWideTrait"})
+		AddTraitToHero({TraitName = "GunLoadedGrenadeInfiniteAmmoTrait"})
+	end
+
+	if(GetEquippedWeapon() == "ShieldWeapon") then
+		AddTraitToHero({TraitName = "ShieldBashDamageTrait"})
+		AddTraitToHero({TraitName = "ShieldDashAOETrait"})
+		AddTraitToHero({TraitName = "ShieldChargeSpeedTrait"})
+		AddTraitToHero({TraitName = "ShieldPerfectRushTrait"})
+		AddTraitToHero({TraitName = "ShieldThrowElectiveCharge"})
+		AddTraitToHero({TraitName = "ShieldThrowEmpowerTrait"})
+		AddTraitToHero({TraitName = "ShieldBlockEmpowerTrait"})
+		AddTraitToHero({TraitName = "ShieldThrowRushTrait"})
+	end
+
 
 	return CurrentRun
 
@@ -518,6 +563,12 @@ function ChooseNextRoomData( currentRun, args )
 	args = args or {}
 
 	local currentRoom = currentRun.CurrentRoom
+
+	if(currentRoom.ForceNextRoom ~= nil) then
+		return RoomData[currentRoom.ForceNextRoom]
+	end
+	
+
 	local roomSetName = currentRun.CurrentRoom.RoomSetName or "Tartarus"
 	if args.ForceNextRoomSet ~= nil then
 		roomSetName = args.ForceNextRoomSet
