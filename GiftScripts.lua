@@ -131,6 +131,7 @@ function GetGiftLevelData( npcName, level )
 end
 
 function CanReceiveGift( npcData )
+	if(npcData.CanReceiveGift) then return true end
 	local textLineSets = npcData.InteractTextLineSets or {}
 	local repeatableLineSets = npcData.RepeatableTextLineSets or {}
 	local name = GetGenusName( npcData )

@@ -2069,15 +2069,7 @@ function GetHighestRunClearShrinePointThreshold()
 end
 
 function GetLastClearedShrinePointThreshold( weaponName )
-	local minValue = nil
-	for i, roomName in pairs( ShrineClearData.BossRoomNames ) do
-		local roomClearValue = GetLastRoomClearedShrinePointThreshold( weaponName, roomName )
-		if not minValue or roomClearValue < minValue then
-			minValue = roomClearValue
-		end
-	end
-	return minValue
-
+	return 50
 end
 
 function GetCurrentRunClearedShrinePointThreshold( weaponName )

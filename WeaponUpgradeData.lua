@@ -40,7 +40,7 @@
 			MaxUpgradeLevel = 5,
 			GameStateRequirements =
 			{
-				RequiredTextLines = { "NyxRevealsArthurAspect01" },
+			--  RequiredTextLines = { "NyxRevealsArthurAspect01" },
 			},
 			TraitName = "SwordConsecrationTrait",
 			EquippedKitAnimation = "WeaponSwordAlt03FloatingIdleOff",
@@ -89,7 +89,7 @@
 			MaxUpgradeLevel = 5,
 			GameStateRequirements =
 			{
-				RequiredTextLines = { "AchillesRevealsGuanYuAspect01" },
+			--  RequiredTextLines = { "AchillesRevealsGuanYuAspect01" },
 			},
 			UnequipFunctionName = "RemoveSpearGuanYu",
 			-- To be replaced
@@ -137,7 +137,7 @@
 			MaxUpgradeLevel = 5,
 			GameStateRequirements =
 			{
-				RequiredTextLines = { "ZeusRevealsLuciferAspect01" },
+			--  RequiredTextLines = { "ZeusRevealsLuciferAspect01" },
 			},
 			TraitName = "GunLoadedGrenadeTrait",
 			EquippedKitAnimation = "WeaponGunAlt03FloatingIdleOff",
@@ -185,7 +185,7 @@
 			MaxUpgradeLevel = 5,
 			GameStateRequirements =
 			{
-				RequiredTextLines = { "ArtemisRevealsRamaAspect01" },
+			--  RequiredTextLines = { "ArtemisRevealsRamaAspect01" },
 			},
 			TraitName = "BowBondTrait",
 			EquippedKitAnimation = "WeaponBowAlt03FloatingIdleOff",
@@ -230,7 +230,7 @@
 			MaxUpgradeLevel = 5,
 			GameStateRequirements =
 			{
-				RequiredTextLines = { "ChaosRevealsBeowulfAspect01" },
+			--  RequiredTextLines = { "ChaosRevealsBeowulfAspect01" },
 			},
 			UnequipFunctionName = "RemoveSelfAmmoLoad",
 			TraitName = "ShieldLoadAmmoTrait",
@@ -281,7 +281,7 @@
 			MaxUpgradeLevel = 5,
 			GameStateRequirements =
 			{
-				RequiredTextLines = { "MinotaurRevealsGilgameshAspect01" },
+			----  RequiredTextLines = { "MinotaurRevealsGilgameshAspect01" },
 			},
 			TraitName = "FistDetonateTrait",
 			EquippedKitAnimation = "WeaponFistsAlt03FloatingIdleOff",
