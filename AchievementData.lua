@@ -321,6 +321,7 @@
 		},
 	},
 
+	-- Ares achievement
 	AchAresKills =
 	{
 		InheritFrom = { "DefaultAchievement" },

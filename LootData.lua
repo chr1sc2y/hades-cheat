@@ -2139,7 +2139,7 @@ LootData =
 				PreEventFunctionName = "BoonInteractPresentation", PreEventFunctionArgs = { PickupWait = 1.0, },
 				RequiredTextLines = { "AresKillQuest01", },
 				MinRunsSinceAnyTextLines = { TextLines = { "AresKillProgress01", "AresKillProgress02" }, Count = 2 },
-				RequiredMinTotalKills = 10000,
+				RequiredMinTotalKills = 10,
 
 				{ Cue = "/VO/Ares_0121",
 					StartSound = "/Leftovers/World Sounds/MapZoomInShort", UseEventEndSound = true,
@@ -2313,7 +2313,7 @@ LootData =
 				PreEventFunctionName = "BoonInteractPresentation", PreEventFunctionArgs = { PickupWait = 1.0, },
 				RequiredTextLines = { "AresGift03" },
 				RequiredFalseTextLinesLastRun = { "AresKillProgress02" },
-				RequiredMinTotalKills = 2000,
+				RequiredMinTotalKills = 10,
 
 				{ Cue = "/VO/Ares_0193",
 					StartSound = "/Leftovers/World Sounds/MapZoomInShort", UseEventEndSound = true,
