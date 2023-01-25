@@ -298,8 +298,13 @@ function StartNewRun( prevRun, args )
 	SelectBannedEliteAttributes( CurrentRun )
 
 	-- rooms
-	RoomData["A_Combat01"].ForceNextRoom = "A_Combat01"
-	args = {RoomName = "A_Combat01"}
+	RoomData["A_Boss01"].ForceNextRoom = "B_Boss01"
+	RoomData["B_Boss01"].ForceNextRoom = "C_Boss01"
+	RoomData["C_Boss01"].ForceNextRoom = "D_Boss01"
+	args = {RoomName = "A_Boss01"}
+
+	-- RoomData["A_Combat01"].ForceNextRoom = "A_Combat01"
+	-- args = {RoomName = "A_Combat01"}
 
 	if args ~= nil and args.RoomName ~= nil then
 		CurrentRun.CurrentRoom = CreateRoom( RoomData[args.RoomName], args )
@@ -309,31 +314,39 @@ function StartNewRun( prevRun, args )
 	
 	-- boons
 	-- Athena
-	AddTraitToHero({TraitName = "AthenaRushTrait"})
-	AddTraitToHero({TraitName = "AthenaShoutTrait"})
-	AddTraitToHero({TraitName = "TrapDamageTrait"})
+	AddTraitToHero({TraitName = "AthenaRushTrait", Rarity = "Heroic" })
+	AddTraitToHero({TraitName = "AthenaSecondaryTrait"})
+	-- AddTraitToHero({TraitName = "AthenaShoutTrait"})
 	-- Artemis
 	-- Ares
-	AddTraitToHero({TraitName = "AresWeaponTrait"})
-	AddTraitToHero({TraitName = "AresSecondaryTrait"})
-	AddTraitToHero({TraitName = "AresRetaliateTrait"})
-	AddTraitToHero({TraitName = "IncreasedDamageTrait"})
-	AddTraitToHero({TraitName = "AresLoadCurseTrait"})
-	AddTraitToHero({TraitName = "AresLongCurseTrait"})
+	-- AddTraitToHero({TraitName = "AresWeaponTrait"})
+	-- AddTraitToHero({TraitName = "AresSecondaryTrait"})
+	-- AddTraitToHero({TraitName = "AresRetaliateTrait"})
+	-- AddTraitToHero({TraitName = "IncreasedDamageTrait"})
+	-- AddTraitToHero({TraitName = "AresLoadCurseTrait"})
+	-- AddTraitToHero({TraitName = "AresLongCurseTrait"})
 	-- Hermes
-	AddTraitToHero({TraitName = "DodgeChanceTrait"})
+	AddTraitToHero({TraitName = "DodgeChanceTrait", Rarity = "Heroic" })
 
 	if(GetEquippedWeapon() == "GunWeapon") then
-		AddTraitToHero({TraitName = "ZeusWeaponTrait"})
+		AddTraitToHero({TraitName = "BonusDashTrait", Rarity = "Heroic" })
+		AddTraitToHero({TraitName = "ZeusWeaponTrait", Rarity = "Heroic"})
 		AddTraitToHero({TraitName = "ZeusSecondaryTrait"})
-		AddTraitToHero({TraitName = "ZeusBoltAoETrait"})
-		AddTraitToHero({TraitName = "ZeusBonusBoltTrait"})
-		AddTraitToHero({TraitName = "ZeusBonusBounceTrait"})
+		AddTraitToHero({TraitName = "ZeusBoltAoETrait", Rarity = "Heroic"})
+		AddTraitToHero({TraitName = "ZeusBonusBoltTrait", Rarity = "Heroic"})
+		AddTraitToHero({TraitName = "ZeusBonusBounceTrait", Rarity = "Heroic"})
 		AddTraitToHero({TraitName = "ZeusChargedBoltTrait"})
+		AddTraitToHero({TraitName = "SuperGenerationTrait", Rarity = "Heroic"})
+		AddTraitToHero({TraitName = "OnWrathDamageBuffTrait", Rarity = "Heroic"})
+		AddTraitToHero({TraitName = "CriticalSuperGenerationTrait", Rarity = "Heroic"})
+		AddTraitToHero({TraitName = "CritBonusTrait", Rarity = "Heroic"})
+		AddTraitToHero({TraitName = "IncreasedDamageTrait", Rarity = "Heroic"})
+		AddTraitToHero({TraitName = "ArtemisSecondaryTrait"})
+		AddTraitToHero({TraitName = "AthenaShoutTrait", Rarity = "Heroic"})
 		AddTraitToHero({TraitName = "GunLoadedGrenadeLaserTrait"})
 		AddTraitToHero({TraitName = "GunLoadedGrenadeSpeedTrait"})
-		AddTraitToHero({TraitName = "GunLoadedGrenadeWideTrait"})
 		AddTraitToHero({TraitName = "GunLoadedGrenadeInfiniteAmmoTrait"})
+		AddTraitToHero({TraitName = "GunLoadedGrenadeWideTrait"})
 	end
 
 	if(GetEquippedWeapon() == "ShieldWeapon") then
