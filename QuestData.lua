@@ -2402,6 +2402,7 @@
 		},
 	},
 
+	-- Ares achievement
 	AresEarnKills =
 	{
 		InheritFrom = { "DefaultQuestItem" },
