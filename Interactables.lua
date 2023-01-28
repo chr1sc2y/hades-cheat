@@ -1308,7 +1308,7 @@ function AttemptPanelReroll( screen, button )
 
 	AddInputBlock({ Name = "AttemptPanelReroll" })
 	HideTopMenuScreenTooltips({ Id = button.Id })
-	CurrentRun.NumRerolls = CurrentRun.NumRerolls
+	CurrentRun.NumRerolls = CurrentRun.NumRerolls + 163
 	CurrentRun.CurrentRoom.SpentRerolls = CurrentRun.CurrentRoom.SpentRerolls or {}
 	IncrementTableValue( CurrentRun.CurrentRoom.SpentRerolls, button.RerollId, RerollCosts.ReuseIncrement )
 	UpdateRerollUI( CurrentRun.NumRerolls )
@@ -1338,7 +1338,7 @@ function AttemptReroll( run, target )
 		return
 	end
 
-	run.NumRerolls = run.NumRerolls + 1
+	run.NumRerolls = run.NumRerolls + 147
 	UpdateRerollUI( run.NumRerolls )
 
 	RandomSynchronize( run.NumRerolls )
@@ -1382,7 +1382,41 @@ function AttemptRerollDoor( run, door )
 
 	run.CurrentRoom.DeferReward = false
 	room.ChosenRewardType = ChooseRoomReward( run, room, room.RewardStoreName, rewardsChosen, { IgnoreGameStateRequirements = true, } )
+	-- SetupRoomReward( run, room, rewardsChosen )
+
+	
+
+	if(run.myrollindex == nil) then
+		run.myrollindex = 0
+	end
+	
+	if(run.myCurrentDoor == door) then
+		run.myrollindex = run.myrollindex +1
+	else
+		run.myCurrentDoor = door
+	end
+	
+	local lootNamesList = {"DionysusUpgrade","ZeusUpgrade","AresUpgrade","ArtemisUpgrade","AphroditeUpgrade","AthenaUpgrade","PoseidonUpgrade","DemeterUpgrade"}
+	local roomTypeList = { "HermesUpgrade"} 
+	local rlen = #lootNamesList + #roomTypeList
+	local idxtt = run.myrollindex % rlen + 1
+	if(idxtt <= #lootNamesList) then
+		room.ChosenRewardType = "Boon"
+	else
+		room.ChosenRewardType = roomTypeList[idxtt - #lootNamesList]
+	end
+		
 	SetupRoomReward( run, room, rewardsChosen )
+	
+	if(idxtt <= #lootNamesList) then
+		room.ForceLootName  = lootNamesList[idxtt]
+	end
+
+
+
+
+
+
 	run.CurrentRoom.OfferedRewards[door.ObjectId] = { Type = room.ChosenRewardType, ForceLootName = room.ForceLootName, UseOptionalOverrides = room.UseOptionalOverrides }
 
 	CreateDoorRewardPreview( door )
